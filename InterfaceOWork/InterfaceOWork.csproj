@@ -1,0 +1,99 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InterfaceOWork</RootNamespace>
+    <AssemblyName>InterfaceOWork</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <WarningLevel>3</WarningLevel>
+    <FileVersion>20.220.0016</FileVersion>
+    <InformationalVersion>20.220.0016</InformationalVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\Instance_FLEX\OdiceOctobreNEW\Bin</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BibliothequeFonctions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OdiceOctobreNEW\Bin\BibliothequeFonctions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OdiceOctobreNEW\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Common">
+      <HintPath>C:\Instance_FLEX\OdiceOctobreNEW\Bin\PX.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.CS.Contracts">
+      <HintPath>C:\Instance_FLEX\OdiceOctobreNEW\Bin\PX.CS.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data">
+      <HintPath>C:\Instance_FLEX\OdiceOctobreNEW\Bin\PX.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b136cac2f602b8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OdiceOctobreNEW\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Objects">
+      <HintPath>C:\Instance_FLEX\OdiceOctobreNEW\Bin\PX.Objects.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OdiceOctobreNEW\Bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAC\OCIOW_ARInvoiceProcessFilter.cs" />
+    <Compile Include="DAC\OCIOW_ARRegisterExt.cs" />
+    <Compile Include="DAC\OCIOW_BaccountExt.cs" />
+    <Compile Include="DAC\OCIOW_ContactExt.cs" />
+    <Compile Include="DAC\OCIOW_LocationExt.cs" />
+    <Compile Include="DAC\OCIOW_Setup.cs" />
+    <Compile Include="Examples.cs" />
+    <Compile Include="Graph\OCIOW_SetupMaint.cs" />
+    <Compile Include="Graph\OWIOW_ProcessExportInvoiceMaint.cs" />
+    <Compile Include="Helpers\OCIOW_Exceptions.cs" />
+    <Compile Include="Helpers\OCIWS_Constants.cs" />
+    <Compile Include="Interface Classes\Accessibilité\OCIOW_BaseWS.cs" />
+    <Compile Include="Interface Classes\Accessibilité\OCIOW_OWorkWS.cs" />
+    <Compile Include="Interface Classes\Communication\OCIOW_AttachmentWS.cs" />
+    <Compile Include="Interface Classes\Communication\OCIOW_InvoiceWS.cs" />
+    <Compile Include="Interface Classes\Communication\OCIOW_Structs.cs" />
+    <Compile Include="Graph\OCIOW_ARInvoiceEntryExt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
