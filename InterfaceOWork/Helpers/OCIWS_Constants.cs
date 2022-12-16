@@ -8,6 +8,6 @@ namespace InterfaceOWork
 {
     public class OCIWS_Constants
     {
-        public const string LiasseName = "Envoi du {0}";
+        public const string LiasseName = "Envoi du {0} par {1}";
     }
 }

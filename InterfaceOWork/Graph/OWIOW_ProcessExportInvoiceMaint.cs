@@ -78,7 +78,7 @@ namespace InterfaceOWork
                 invWSList.Add(invGraphExt.Mapping());
             }
 
-            OCIOW_CreateInvoiceRequestResult result = OCIOW_InvoiceWS.SendInvoiceList(invWSList, string.Format(OCIWS_Constants.LiasseName, DateTime.Now));
+            OCIOW_CreateInvoiceRequestResult result = OCIOW_InvoiceWS.SendInvoiceList(invWSList, string.Format(OCIWS_Constants.LiasseName, DateTime.Now, invGraph.Accessinfo.UserName));
             string errorMessage = "";
             foreach(int id in result.InvoicesIds)
             {

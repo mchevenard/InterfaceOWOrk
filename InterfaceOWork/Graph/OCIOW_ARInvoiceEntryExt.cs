@@ -52,7 +52,7 @@ namespace InterfaceOWork
         public void ExportFactureOWork()
         {
             OCIOW_InvoiceWS invWS = Mapping();
-            OCIOW_CreateInvoiceRequestResult result = OCIOW_InvoiceWS.SendInvoiceList(new List<OCIOW_InvoiceWS> { invWS }, invWS.invoice_number);
+            OCIOW_CreateInvoiceRequestResult result = OCIOW_InvoiceWS.SendInvoiceList(new List<OCIOW_InvoiceWS> { invWS }, invWS.invoice_number + " par " + Base.Accessinfo.UserName);
             GestionErreurOWork(Base.Document.Current, result);
             Base.Save.Press();
         }
